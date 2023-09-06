@@ -2,10 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h5 {
+    @apply absolute bottom-4 md:bottom-8 px-6 duration-200 w-52 md:px-10 group-hover:scale-110 group-hover:text-black;
+  }
+}
+
 @layer components {
   .btm {
     @apply uppercase border-2 border-black px-10 py-2 font-bold tracking-widest  hover:bg-black hover:text-white;
   }
+}
+
+.item {
+  @apply relative overflow-hidden md:w-1/4;
+}
+
+.item-container {
+  @apply flex flex-col justify-between w-full space-y-6 text-2xl text-white uppercase md:flex-row md:space-y-0 md:space-x-8;
 }
 
 #hero {
