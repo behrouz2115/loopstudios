@@ -2,18 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer components {
+  .btm {
+    @apply uppercase border-2 border-black px-10 py-2 font-bold tracking-widest  hover:bg-black hover:text-white;
+  }
+}
 
 #hero {
-    background-image: url('../image/bigScreen/image-hero.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../image/bigScreen/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 576px) {
+  #hero {
+    background-image: url("../image/smallScreen/image-hero.jpg");
+    background-position: center;
   }
-  
-  @media (max-width: 576px) {
-    #hero {
-      background-image: url('../image/smallScreen/image-hero.jpg');
-      background-position: center;
-    }
-  }
-  
+}
